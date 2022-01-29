@@ -8,8 +8,8 @@ const Nav = (props) => {
         return <header>
             <h1>My New Year's Resolutions</h1>
             <nav>
-                <Link to="/"><div>Home</div></Link>
                 {!state.token ? (<>
+                <Link to="/"><div>Home</div></Link>
                 <Link to="/auth/signup"><div>Sign Up</div></Link>
                 <Link to="/auth/login"><div>Log In</div></Link></>) : null}
                 {state.token ? 

@@ -31,7 +31,11 @@ const reducer = (state, action) => {
       newState = {...state, notes: action.payload};
       return newState
       break
-    default:
+    case "select":
+      newState = {...state, edit: action.payload};
+      return newState
+      break
+    default: 
       return state;
       break;
   }

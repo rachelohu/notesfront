@@ -32,6 +32,18 @@ const Dashboard = (props) => {
                         {state.notes.map((note) => (
                                 <div className="note" key={note.id}>
                                         <h2>{note.message}</h2>
+                                        <button onClick={() => {
+                                                dispatch({type: "select", payload: note})
+                                                props.history.push("/dashboard/edit")
+                                        }}>Edit</button>
+                                        <button onClick={() => {
+                                                fetch(url + "/notes/" + note.id, {
+                                                        method: "delete",
+                                                        headers: {
+                                                                Authorization: "bearer " + token
+                                                        }
+                                                }).then(() => getNotes());
+                                        }}>Delete</button>
                                 </div>
                         ))}
                 </ul>
