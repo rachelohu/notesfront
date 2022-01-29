@@ -6,7 +6,7 @@ const Nav = (props) => {
 
     const { state, dispatch } = useAppState()
         return <header>
-            <h1>My New Year's Resolutions</h1>
+            <h1>New Year's Resolutions</h1>
             <nav>
                 {!state.token ? (<>
                 <Link to="/"><div>Home</div></Link>
