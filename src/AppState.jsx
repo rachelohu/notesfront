@@ -2,7 +2,7 @@ import React, {useContext, useReducer} from "react"
 
 //Initial state
 const initialState = {
-  url: "http://rh-notes.herokuapp.com",
+  url: "https://rh-notes.herokuapp.com/",
   token: null,
   email: null,
   notes: null,
